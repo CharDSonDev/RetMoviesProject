@@ -1,0 +1,6 @@
+Roche.123.cliente
+Mersy.09876.administrador
+Omar.123.administrador.Mexico
+Jack.123.administrador.Peru
+Namell.123.cliente.Colombia
+Retro.1231.cliente.Mexico

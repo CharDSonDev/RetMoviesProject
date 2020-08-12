@@ -1,0 +1,10 @@
+{
+  "version": 2,
+  "dgSpecHash": "4k+N6dccs+e2s7L9sjU6oBu3pwNex+JDPRTVMTFTVWAY97eB9hmxSIUvDGUsHE/7+Li4/5epZU9Cw3eZSOYmug==",
+  "success": true,
+  "projectFilePath": "/home/chardson/dotnet/Proyecto/Proyecto.csproj",
+  "expectedPackageFiles": [
+    "/home/chardson/.nuget/packages/microsoft.netcore.app.ref/3.1.0/microsoft.netcore.app.ref.3.1.0.nupkg.sha512"
+  ],
+  "logs": []
+}

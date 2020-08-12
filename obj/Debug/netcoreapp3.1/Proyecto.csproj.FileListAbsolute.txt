@@ -1,0 +1,13 @@
+/home/chardson/dotnet/Proyecto/bin/Debug/netcoreapp3.1/Proyecto
+/home/chardson/dotnet/Proyecto/bin/Debug/netcoreapp3.1/Proyecto.deps.json
+/home/chardson/dotnet/Proyecto/bin/Debug/netcoreapp3.1/Proyecto.runtimeconfig.json
+/home/chardson/dotnet/Proyecto/bin/Debug/netcoreapp3.1/Proyecto.runtimeconfig.dev.json
+/home/chardson/dotnet/Proyecto/bin/Debug/netcoreapp3.1/Proyecto.dll
+/home/chardson/dotnet/Proyecto/bin/Debug/netcoreapp3.1/Proyecto.pdb
+/home/chardson/dotnet/Proyecto/obj/Debug/netcoreapp3.1/Proyecto.csprojAssemblyReference.cache
+/home/chardson/dotnet/Proyecto/obj/Debug/netcoreapp3.1/Proyecto.csproj.CoreCompileInputs.cache
+/home/chardson/dotnet/Proyecto/obj/Debug/netcoreapp3.1/Proyecto.AssemblyInfoInputs.cache
+/home/chardson/dotnet/Proyecto/obj/Debug/netcoreapp3.1/Proyecto.AssemblyInfo.cs
+/home/chardson/dotnet/Proyecto/obj/Debug/netcoreapp3.1/Proyecto.dll
+/home/chardson/dotnet/Proyecto/obj/Debug/netcoreapp3.1/Proyecto.pdb
+/home/chardson/dotnet/Proyecto/obj/Debug/netcoreapp3.1/Proyecto.genruntimeconfig.cache

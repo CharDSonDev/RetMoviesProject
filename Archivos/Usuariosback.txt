@@ -1,0 +1,6 @@
+Jack.12345.administrador
+Rcohe.1234.cliente.sas
+Kon.kon.administrador.dedee
+Roche.123.cliente.feJack.12345.administrador
+Rcohe.1234.cliente.sas
+Roche.123.cliente.fe
