@@ -5,15 +5,11 @@ namespace Program.ClasesAuxiliares
 {
     class Peliculas
     {
-		//Crear un string con la direccion de los archivos donde se guarda la informacion de las peliculas y
-		//las peliculas con el nombre del usuario que la arquilo
         private const string ArchivoPeliculas = "Archivos/Peliculas.txt";
 		private const string ArchivoAlquilo = "Archivos/alquilado.txt";
 
-		//Aqui es donde se registran las peliculas
         public void registrarPeliculas(string nombre, string costo, DateTime time)
         {
-			// este verifica que si el archvio Peliculas.txt existe
             if(File.Exists(ArchivoPeliculas))
             {
 		        if(File.ReadAllText(ArchivoPeliculas).Equals(""))
@@ -31,7 +27,6 @@ namespace Program.ClasesAuxiliares
 			}
     	}
 		
-		//aqui es donde se pueden alquilar las peliculas
 		public void alquilarPelicula(string vnombre, string peliculaAlquilada)
 		{
 			Console.WriteLine(File.ReadAllText(ArchivoPeliculas));
@@ -53,7 +48,6 @@ namespace Program.ClasesAuxiliares
 			}
 		}
 
-		//aqui se cambia la informacion de una pelicula
 		public void editarPeliculas(string nombre, string costo, DateTime time, string nombreDeLaPelicula)
 		{
 			string[] datos = File.ReadAllLines(ArchivoPeliculas);
@@ -69,7 +63,6 @@ namespace Program.ClasesAuxiliares
             File.WriteAllText(ArchivoPeliculas, resultado);
 		}
 
-		//aqui es donde se eliminar una pelicula
 		public void eliminarPelicula(string opcion)
 		{
             int sumaTotal = 0;
@@ -91,7 +84,6 @@ namespace Program.ClasesAuxiliares
             File.WriteAllText(ArchivoPeliculas, datosFinales);
 		}
 
-		//aqui se puede ver las ganancias que se obtuvieron con las peliculas alquiladas
 		public decimal ganadoConPeliculas()
 		{
 			string[] datos = File.ReadAllLines(ArchivoPeliculas);
@@ -111,7 +103,6 @@ namespace Program.ClasesAuxiliares
 			return sumaTotal;
 		}
 
-		//aqui se puede ver todas la peliculas que se alquilaron
 		public void peliculasAlquiladas()
 		{
 			string[] datos = File.ReadAllLines(ArchivoAlquilo);
@@ -125,13 +116,11 @@ namespace Program.ClasesAuxiliares
 		public void peliculasAEntregar()
 		{
 
-		//aqui es donde se verifica el nombre de una nueva pelicula registrar para no crear peliculas con el mismo nombre
 		}
 		public bool existePelicula(string nombre)
         {
             string[] datos = File.ReadAllLines(ArchivoPeliculas);
 
-            //este verifica si el nombre que de la pelicula que intenta registrar o introducir un nuevo nombre existe
             for(int i = 0; i < datos.Length; i++)
             {
                 if(datos[i].Split('.')[0] == nombre)

@@ -17,7 +17,6 @@ namespace Program.ClasesAuxiliares
         int opcion = 0;
         int opcion1 = 0;
         int opcion2 = 0;
-        // este menu es donde los usuarios iniciaran session
         public void opcionLogin()
         {
             string nombre, password, tipoUser;
@@ -45,7 +44,6 @@ namespace Program.ClasesAuxiliares
                 Console.ReadKey();
             }
         }
-        // este menu es donde el usurio se registrara con su nombre, contraseña, tipo de usuario y su direccion
         public void opcionRegistrarse()
         {
             string nombre, password, tipoUser, direccionDelUsuario;
@@ -69,7 +67,6 @@ namespace Program.ClasesAuxiliares
                 usuarios.registrarUsuario(nombre, password, tipoUser, direccionDelUsuario);
             }
         }
-        // este menu es el menu del usuario administrador
         public void opcionLoginAdministrador(string nombre, string password, string tipoUser)
         {
             do
@@ -79,7 +76,6 @@ namespace Program.ClasesAuxiliares
                 admin = Console.ReadLine();
                 switch (admin)
                 {
-                    //aqui es el administrador puede editar su pefil
                     case "1":
                         Console.Clear();
                         Console.Write("Nuevo nombre: ");
@@ -102,7 +98,6 @@ namespace Program.ClasesAuxiliares
                         }
                     break;
                     case "2":
-                    //aqui es donde el administrador registra un pelicula
                         Console.Clear();
                         Console.Write("Ingrese nombre para la pelicula: ");
                         string nameMov = Console.ReadLine();
@@ -124,13 +119,11 @@ namespace Program.ClasesAuxiliares
                     case "3":
                     do
                     {
-                        //este es el menu donde el administrador administra las peliculas registradas
                         Console.Clear();
                         Console.WriteLine("1.- Editar Peliculas \n2.- Eliminar Pelicula");
                         adminPeliculas = Console.ReadLine();
                         switch (adminPeliculas)
                         {
-                            //aqui el administror edita la informacion de las peliculas
                             case "1":
                             Console.Clear();
                             int numero = 0;
@@ -160,7 +153,6 @@ namespace Program.ClasesAuxiliares
                             }
                             break;
                             case "2":
-                            //aqui el administrador elimina peliculas
                             Console.Clear();
                             int pocision2 = 0;
                             string[] info1 = File.ReadAllLines("Archivos/Peliculas.txt");
@@ -178,13 +170,11 @@ namespace Program.ClasesAuxiliares
                     case "4":
                         do
                         {
-                            //en este menu el administrador administra los usuarios registrados
                             Console.Clear();
                             Console.WriteLine("1.- Editar Usuarios \n2.- Eliminar usuario");
                             adminUsers = Console.ReadLine();
                             switch (adminUsers)
                             {
-                                //aqui el administrador edita la informacion de los usurios
                                 case "1":
                                 Console.Clear();
                                 int pocision2 = 0;
@@ -215,7 +205,6 @@ namespace Program.ClasesAuxiliares
                                 }
                                 break;
                                 case "2":
-                                //aqui el administrador eliminar usuarios
                                 Console.Clear();
                                 int pocision1 = 0;
                                 string[] info1 = File.ReadAllLines("Archivos/Usuarios.txt");
@@ -231,7 +220,6 @@ namespace Program.ClasesAuxiliares
                         }while (opcion1 != 3);
                     break;
                     case "5":
-                    //aqui es donde el administrador puede alquilar una pelicula
                     Console.Clear();
                     int numero4 = 0;
                     string[] datos4 = File.ReadAllLines("Archivos/Peliculas.txt");
@@ -245,19 +233,16 @@ namespace Program.ClasesAuxiliares
                     peliculas.alquilarPelicula(nombre, datos4[numero4-1].Split('.')[0]);
                     break;
                     case "6":
-                    //en esta parte se puede ver el dinero ganado por las peliculas que fueron alquiladas
                     Console.Clear();
                     decimal sumaTotal = peliculas.ganadoConPeliculas();
                     Console.WriteLine("\nGanancia total: " + sumaTotal);
 			        Console.ReadKey();
                     break;
                     case "7":
-                    //aqui se puede ver las peliculas alquiladas
                     Console.Clear();
                     peliculas.peliculasAlquiladas();
                     break;
                     case "8":
-                    //aqui es donde esta el opcion salir
                     Console.Clear();
                     Environment.Exit(1);
                     break;
@@ -268,14 +253,12 @@ namespace Program.ClasesAuxiliares
         {
             do
             {
-                //este el menu de opciones para el cliente
                 Console.Clear();
                 Console.WriteLine("Bienvenido " + nombre + "\n\n1.- Editar usuario \n2.- Alquilar una pelicula \n3.- Ver peliculas alquiladas \n4.- Salir");
                 client = Console.ReadLine();
                 switch (client)
                 {
                     case "1":
-                    //en este menu el cliente puede editar su informacion
                         Console.Clear();
                         Console.Write("Nuevo nombre: ");
                         string newNombre = Console.ReadLine();
@@ -297,7 +280,6 @@ namespace Program.ClasesAuxiliares
                         }
                     break;
                     case "2":
-                    //aqui el cliente puede alquilar una de las peliculas registradas
                         Console.Clear();
                         int numero = 0;
                         string[] datos = File.ReadAllLines("Archivos/Peliculas.txt");
@@ -311,12 +293,10 @@ namespace Program.ClasesAuxiliares
                         peliculas.alquilarPelicula(nombre, datos[numero-1].Split('.')[0]);
                     break;
                     case "3":
-                    //aqui es donde el cliente puede ver la peliculas alquiladas
                         Console.Clear();
                         peliculas.peliculasAlquiladas();
                     break;
                     case "4":
-                    //aqui es donde esta el opcion salir
                     Console.Clear();
                     Environment.Exit(1);
                     break;
